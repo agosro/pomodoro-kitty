@@ -54,7 +54,7 @@ El proyecto está publicado y disponible para usar online gracias a GitHub Pages
 ---
 ## Capturas de pantalla
 
-Aquí te mostramos cómo se ve **Pomodoro Kitty** en acción:
+Te mostramos cómo se ve **Pomodoro Kitty** en acción:
 
 ![Pantalla principal del Pomodoro Kitty con el temporizador, botones y modo pomodoro seleccionado](assets/Inicio.png)
 
