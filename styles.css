@@ -67,29 +67,33 @@ h1 {
 .break-container {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    margin-left: 50px;
 }
 
 
 /* Estilos para cada botón de descanso */
 .break {
     background: #294056;
-    width: 209px;
-    height: 84px;
+    width: 150px;
+    height: 50px;
     border-radius: 22px;
     color: var(--text-color);
     font-family: var(--font-family);
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 400;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     /* Centrado vertical del texto dentro del botón con Flexbox */
     display: flex;
-    flex-direction: column;
+    align-items: center; /* centra vertical texto */
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 25px;
+    cursor: pointer;
 }
 
+.break:hover {
+    background-color: var(--quaternary-color);
+}
 /* Contenedor principal del gato y botones break (en fila)
 - display: flex para alinear hijos horizontalmente
 - align-items: center alinea verticalmente al medio
@@ -99,10 +103,9 @@ h1 {
 .cat-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
     padding: 30px 51px;
-    gap: 16px;
     position: relative;
 }
 
@@ -117,9 +120,10 @@ h1 {
     height: 296px;
     position: absolute;
     bottom: -25px; /* o el valor que quieras para superponer */
-    left: 70%;
+    left: 65%;
     transform: translateX(-50%);
     z-index: 2; /* Asegura que esté por encima del timer */
+
 }
 
 /* Contenedor del timer y botones start/stop:
@@ -172,9 +176,52 @@ h1 {
     font-family: var(--font-family);
     font-size: 18px;
     font-weight: 200;
+    cursor: pointer;
 }
 
 /* Botón stop con color diferente */
 .stop-button {
     background-color: var(--quaternary-color);
+}
+
+
+.notification {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--quaternary-color); /* un tono que resalta */
+    color: var(--text-color);
+    font-family: var(--font-family);
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem;
+    font-weight: 600;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.4s ease, top 0.4s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.notification.show {
+    opacity: 1;
+    top: 50px;
+}
+
+.notification.hidden {
+    opacity: 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 14px;
+    text-align: center;
 }
