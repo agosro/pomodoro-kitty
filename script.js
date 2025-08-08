@@ -17,7 +17,7 @@ let seconds = 0; // Segundos restantes
 
 
 function playSound() { // Función para reproducir un sonido cuando el temporizador termina
-    const audio = new Audio('assets/cat.mp3');
+    const audio = new Audio('./assets/cat.mp3');
     audio.play();
 }
 
