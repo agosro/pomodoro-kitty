@@ -77,7 +77,7 @@ function startTimer() {
 
 // Eventos de los botones de modo
 pomodoroBtn.addEventListener("click", () => setMode(25)); // 25 minutos para Pomodoro
-shortBreakBtn.addEventListener("click", () => setMode(1)); // 5 minutos para Short Break
+shortBreakBtn.addEventListener("click", () => setMode(5)); // 5 minutos para Short Break
 longBreakBtn.addEventListener("click", () => setMode(15)); // 15 minutos para Long Break
 
 // Evento Start/Pause
