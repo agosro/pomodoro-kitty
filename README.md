@@ -64,7 +64,7 @@ Te mostramos cómo se ve **Pomodoro Kitty** en acción:
 
 ![Pomodoro Kitty funcionando](assets/Inicio.gif)
 
-![Notificación que aparece cuando termina el temporizador](assets/Notificacion.gif)
+![Notificación que aparece cuando termina el temporizador](assets/Notificación.gif)
 
 ---
 
