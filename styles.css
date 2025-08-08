@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variables CSS color y fuente */
+:root { 
+    --primary-color: #294056;
+    --secondary-color: #15202B;
+    --tertiary-color: #192734;
+    --quaternary-color: #33506B;
+    --background-color: #15202B;
+    --text-color: #FFFFFF;
+    --font-family: 'Raleway', sans-serif;
+}
+
+/* Reseteo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo y altura para el body */
+body {
+    background-color: var(--secondary-color);
+    height: 100vh;
+    
+}
+
+/* Contenedor para centrar todo (usa Flexbox)
+- display: flex activa flexbox
+- align-items: center centra verticalmente
+- justify-content: center centra horizontalmente
+- height: 100vh ocupa toda la pantalla */
+.centrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Contenedor principal:
+- display: flex activa flexbox
+- flex-direction: column organiza hijos en columna (vertical)
+- align-items: center centra horizontalmente hijos
+- justify-content: flex-start alinea hijos arriba */
+.container {
+    width: 623px;
+    height: 678px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Estilo del título */
+h1 {
+    font-family: var(--font-family) ;
+    color: var(--text-color);
+    font-weight: 200;
+    font-size: 70px; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Contenedor de botones de descanso:
+- display: flex activa flexbox
+- flex-direction: column para apilar botones verticalmente
+- gap: espacio entre botones */
+.break-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/* Estilos para cada botón de descanso */
+.break {
+    background: #294056;
+    width: 209px;
+    height: 84px;
+    border-radius: 22px;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 30px;
+    font-weight: 400;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* Centrado vertical del texto dentro del botón con Flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Contenedor principal del gato y botones break (en fila)
+- display: flex para alinear hijos horizontalmente
+- align-items: center alinea verticalmente al medio
+- justify-content: space-between reparte espacio entre los hijos (separados)
+- gap: espacio entre elementos
+- position: relative para que elementos posicionados absolute dentro se basen en este */
+.cat-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 51px;
+    gap: 16px;
+    position: relative;
+}
+
+/* Imagen del gato:
+- position: absolute para superponer sobre otros elementos
+- bottom: -25px baja la imagen superponiéndola
+- left: 70% mueve la imagen desde la izquierda (70% del ancho del padre)
+- transform: translateX(-50%) centra la imagen horizontalmente en ese punto
+- z-index: 2 la pone por encima de otros elementos */
+.cat img {
+    width: 296px;
+    height: 296px;
+    position: absolute;
+    bottom: -25px; /* o el valor que quieras para superponer */
+    left: 70%;
+    transform: translateX(-50%);
+    z-index: 2; /* Asegura que esté por encima del timer */
+}
+
+/* Contenedor del timer y botones start/stop:
+- width y height fijos para tamaño del bloque
+- background-color y border-radius para estilo visual
+- display: flex para usar Flexbox
+- flex-direction: column para organizar hijos en columna (timer arriba, botones abajo)
+- align-items: center para centrar hijos horizontalmente
+- justify-content: center para centrar hijos verticalmente
+- gap: espacio entre timer y botones
+- box-shadow para sombra */
+.timer-container {
+    width: 622px;
+    height: 290px;
+    background-color: #192734;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Estilo del texto timer */
+.timer {
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 100px;
+    font-weight: 200;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* Contenedor de botones start y stop:
+- display: flex para poner botones en fila */
+.button-row {
+    display: flex;
+}
+
+/* Botones start y stop (comparten estilo base) */
+.stop-button, .start-button {
+    background-color: var(--primary-color);
+    width: 312px;
+    height: 50px;
+    border: none;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 200;
+}
+
+/* Botón stop con color diferente */
+.stop-button {
+    background-color: var(--quaternary-color);
+}
