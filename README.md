@@ -52,6 +52,21 @@ El proyecto está publicado y disponible para usar online gracias a GitHub Pages
 - Audio HTML5 para alertas
 
 ---
+## Capturas de pantalla
+
+Aquí te mostramos cómo se ve **Pomodoro Kitty** en acción:
+
+![Pantalla principal del Pomodoro Kitty con el temporizador, botones y modo pomodoro seleccionado](assets/Inicio.png)
+
+![Modo descanso corto seleccionado](assets/Shortbreak.png)
+
+![Modo descanso largo seleccionado](assets/Longbreak.png)
+
+![Pomodoro Kitty funcionando](assets/Inicio.gif)
+
+![Notificación que aparece cuando termina el temporizador](assets/Notificacion.gif)
+
+---
 
 ## 🚀 Posibles mejoras futuras
 
